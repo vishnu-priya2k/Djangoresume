@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+  *{
+    margin:0;
+    padding:0;
+}
+
+.animation-area{
+    background:linear-gradient(45deg,#FF6FD8, #3813C2);
+    width:100%;
+    height:100vh;
+}
+.box-area{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.box-area li{
+    position:absolute;
+    display:block;
+    list-style:none;
+    width:25px;
+    background:rgba(255,255,255,0.2);
+    animation: animate 20s linear infinite;
+    bottom:0px;
+}
+.box-area li:nth-child(1){
+    left:86%;
+    width:90px;
+    height:90px;
+    animation-delay:0s;
+}
+.box-area li:nth-child(2){
+    left:50%;
+    width:40px;
+    height:40px;
+    animation-delay:2s;
+}
+.box-area li:nth-child(3){
+    left:89%;
+    width:79px;
+    height:79px;
+    animation-delay:3s;
+}
+.box-area li:nth-child(4){
+    left:86%;
+    width:90px;
+    height:90px;
+    animation-delay:5s;
+}
+.box-area li:nth-child(5){
+    left:54%;
+    width:65px;
+    height:65px;
+    animation-delay:1s;
+}
+.box-area li:nth-child(6){
+    left:76%;
+    width:43px;
+    height:43px;
+    animation-delay:8s;
+}
+.box-area li:nth-child(7){
+    left:12%;
+    width:9px;
+    height:9px;
+    animation-delay:5s;
+}
+.box-area li:nth-child(8){
+    left:36%;
+    width:26px;
+    height:26px;
+    animation-delay:3s;
+}
+.box-area li:nth-child(9){
+    left:18%;
+    width:100px;
+    height:100px;
+    animation-delay:5.5s;
+}
+@keyframes animate{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    50%{
+        transform:translateY(-400px) rotate(180deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-800px) rotate(360deg);
+        opacity:0;
+    }
+}
+   </style>
+</head>
+<body>
+{% block content %}
+<div class="context">
+<div class="animation-area">
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+<center>
+<h1>Data Verification</h1>
+<p></p>
+
+<div class="container">
+    <form action="/action_page.php">
+
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First name</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="fname" name="name" placeholder="{{fname}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">last name</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="lname" name="name" placeholder="{{lname}}">
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-25">
+                <label for="email">email</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="email" name="name" placeholder="{{skills}}">
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-25">
+                <label for="phno">contact</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="phno" name="name" placeholder="{{phno}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="st">street address</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="st" name="name" placeholder="{{st}}">
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-25">
+                <label for="city">city</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="city" name="name" placeholder="{{city}}">
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-25">
+                <label for="state">state</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="state" name="name" placeholder="{{state}}">
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-25">
+                <label for="country">country</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="country" name="name" placeholder="{{country}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="pincode">pincode</label>
+            </div>
+            <div class="col-85">
+                <input type="text" id="pincode" name="name" placeholder="{{pincode}}">
+            </div>
+        </div>
+        <div>
+         <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+        
+    </form>
+</div>
+</center>
+</div>
+</div>
+
+{% endblock %}
+</body>
+</html>
+
